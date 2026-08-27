@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+:root {
+  --color-navy: #0d1b2a;
+  --color-navy-800: #132842;
+  --color-navy-700: #1b3557;
+  --color-navy-600: #23446e;
+  --color-blue: #6fa8dc;
+  --color-blue-light: #a8c9ea;
+  --color-gold: #d4af37;
+  --color-gold-light: #e8cc7a;
+  --color-red: #b22234;
+  --color-white: #ffffff;
+  --color-ivory: #f7f5ef;
+  --color-ink: #10151d;
+  --color-stone: #6b7280;
+
+  --background: var(--color-ivory);
+  --foreground: var(--color-ink);
+}
+
+@theme inline {
+  --color-navy: var(--color-navy);
+  --color-navy-800: var(--color-navy-800);
+  --color-navy-700: var(--color-navy-700);
+  --color-navy-600: var(--color-navy-600);
+  --color-blue: var(--color-blue);
+  --color-blue-light: var(--color-blue-light);
+  --color-gold: var(--color-gold);
+  --color-gold-light: var(--color-gold-light);
+  --color-red: var(--color-red);
+  --color-ivory: var(--color-ivory);
+  --color-ink: var(--color-ink);
+  --color-stone: var(--color-stone);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-display: var(--font-marcellus);
+  --font-sans: var(--font-manrope);
+  --container-8xl: 90rem;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1, h2, h3, h4,
+.font-display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-navy);
+}
+
+/* Egyptian-geometric hairline pattern, used sparingly as a section accent */
+.pattern-geo {
+  background-image:
+    linear-gradient(45deg, color-mix(in oklab, var(--color-gold) 14%, transparent) 1px, transparent 1px),
+    linear-gradient(-45deg, color-mix(in oklab, var(--color-gold) 14%, transparent) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.pattern-pyramid-row {
+  background-image: linear-gradient(135deg, color-mix(in oklab, var(--color-gold) 22%, transparent) 25%, transparent 25%),
+    linear-gradient(225deg, color-mix(in oklab, var(--color-gold) 22%, transparent) 25%, transparent 25%);
+  background-size: 24px 24px;
+  background-position: 0 0;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(90deg, var(--color-gold-light), var(--color-gold) 55%, #b8933a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.divider-gold {
+  height: 3px;
+  width: 64px;
+  background: linear-gradient(90deg, var(--color-gold), transparent);
+}
+
+@keyframes count-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.fade-up-on-view {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up-on-view.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .fade-up-on-view {
+    opacity: 1;
+    transform: none;
+  }
+}
