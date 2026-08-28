@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
@@ -65,23 +66,20 @@ export function AssessmentDayBanner() {
               </div>
 
               <div className="flex flex-col items-center justify-center gap-4 rounded-md border border-white/10 bg-white/5 p-8 text-center">
-                <div className="grid h-32 w-32 grid-cols-5 grid-rows-5 gap-[3px] rounded-sm bg-white p-3" aria-hidden="true">
-                  {Array.from({ length: 25 }).map((_, i) => (
-                    <span
-                      key={i}
-                      className={
-                        [0, 1, 3, 4, 5, 9, 10, 14, 15, 19, 20, 21, 23, 24, 12].includes(i)
-                          ? "bg-navy"
-                          : "bg-transparent"
-                      }
-                    />
-                  ))}
+                <div className="rounded-sm bg-white p-3">
+                  <Image
+                    src="/qr-register.svg"
+                    alt="QR code linking to the KEMET FC registration page"
+                    width={128}
+                    height={128}
+                    className="h-32 w-32"
+                  />
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/60">
                   Scan to Register
                 </p>
                 <p className="text-[11px] text-white/40">
-                  QR placeholder &mdash; live code generated at launch
+                  Links directly to kemetfc.com/register
                 </p>
               </div>
             </div>
