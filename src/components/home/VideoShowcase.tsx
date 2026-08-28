@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState, useSyncExternalStore } from "react";
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -36,21 +35,11 @@ export function VideoShowcase() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-navy py-20 sm:py-28">
+    <section className="relative overflow-hidden bg-navy py-10 sm:py-14">
       <div className="pattern-geo absolute inset-0 opacity-[0.1]" aria-hidden="true" />
 
       <Container className="relative">
-        <Reveal className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-            See It In Motion
-          </p>
-          <h2 className="mt-3 font-display text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
-            This Is What It Feels Like{" "}
-            <span className="text-gradient-gold">to Wear the Crest.</span>
-          </h2>
-        </Reveal>
-
-        <Reveal delay={120} className="mt-12">
+        <Reveal>
           <div className="group relative overflow-hidden rounded-lg border border-gold/30 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.7)]">
             <div className="relative aspect-video w-full bg-navy-800">
               {reducedMotion ? (
@@ -108,18 +97,6 @@ export function VideoShowcase() {
                   )}
                 </button>
               )}
-
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 p-6 sm:p-9">
-                <p className="max-w-lg text-balance text-sm leading-relaxed text-white/85 sm:text-base">
-                  From the first touch to the final whistle — a glimpse of
-                  the KEMET FC experience.
-                </p>
-                <div className="pointer-events-auto mt-5">
-                  <Button href="/register" variant="gold">
-                    Register for Free Assessment
-                  </Button>
-                </div>
-              </div>
             </div>
           </div>
         </Reveal>

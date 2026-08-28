@@ -19,6 +19,7 @@ import { allFaqItems } from "@/lib/faq-data";
 export default function Home() {
   return (
     <>
+      <VideoShowcase />
       <Hero />
       <AssessmentDayBanner />
       <Pillars />
@@ -32,7 +33,6 @@ export default function Home() {
       <CoachingPhilosophy />
       <Safety />
       <AboutStory compact />
-      <VideoShowcase />
       <Faq items={allFaqItems.slice(0, 6)} />
       <FinalCta />
     </>
