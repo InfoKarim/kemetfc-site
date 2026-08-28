@@ -13,6 +13,7 @@ import { Safety } from "@/components/shared/Safety";
 import { AboutStory } from "@/components/shared/AboutStory";
 import { Faq } from "@/components/shared/Faq";
 import { FinalCta } from "@/components/shared/FinalCta";
+import { VideoShowcase } from "@/components/home/VideoShowcase";
 import { allFaqItems } from "@/lib/faq-data";
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
       <CoachingPhilosophy />
       <Safety />
       <AboutStory compact />
+      <VideoShowcase />
       <Faq items={allFaqItems.slice(0, 6)} />
       <FinalCta />
     </>
