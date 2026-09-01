@@ -213,6 +213,14 @@ export function RegistrationForm() {
               />
               <span>
                 {c.label}
+                {c.key === "liabilityWaiver" ? (
+                  <>
+                    {" "}
+                    <Link href="/legal/liability-waiver" className="underline hover:text-navy">
+                      Read Liability Waiver
+                    </Link>
+                  </>
+                ) : null}
                 {c.key === "privacyPolicy" ? (
                   <>
                     {" "}

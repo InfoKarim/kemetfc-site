@@ -124,3 +124,40 @@ h1, h2, h3, h4,
     transform: none;
   }
 }
+
+.legal-prose h2 {
+  margin-top: 2rem;
+  font-family: var(--font-display, inherit);
+  font-size: 1.25rem;
+  color: var(--color-navy);
+}
+
+.legal-prose h2:first-child {
+  margin-top: 0;
+}
+
+.legal-prose h3 {
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.legal-prose p, .legal-prose li {
+  color: var(--color-stone);
+}
+
+.legal-prose ul, .legal-prose ol {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+}
+
+.legal-prose ul { list-style-type: disc; }
+.legal-prose ol { list-style-type: decimal; }
+
+.legal-prose li { margin-top: 0.35rem; }
+
+.legal-prose strong { color: var(--color-navy); }
+
+.legal-prose a { color: var(--color-navy); text-decoration: underline; }
+.legal-prose a:hover { color: var(--color-gold); }

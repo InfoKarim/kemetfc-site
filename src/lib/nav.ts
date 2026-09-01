@@ -11,6 +11,7 @@ export const primaryNav: NavItem[] = [
   { label: "Programs", href: "/programs" },
   { label: "Parents", href: "/parents" },
   { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
   { label: "Partnerships", href: "/partnerships" },
 ];
 
@@ -30,5 +31,6 @@ export const legalNav: NavItem[] = [
   { label: "Terms & Conditions", href: "/legal/terms" },
   { label: "Youth Data Privacy", href: "/legal/youth-data-privacy" },
   { label: "Photo/Video Policy", href: "/legal/photo-video-policy" },
+  { label: "Liability Waiver", href: "/legal/liability-waiver" },
   { label: "Refund Policy", href: "/legal/refund-policy" },
 ];
