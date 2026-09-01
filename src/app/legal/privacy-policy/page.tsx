@@ -5,7 +5,7 @@ export const metadata: Metadata = { title: "Privacy Policy" };
 
 export default function Page() {
   return (
-    <LegalDocument title="Privacy Policy" lastUpdated="Draft — not yet published">
+    <LegalDocument title="Privacy Policy" lastUpdated="September 1, 2026">
       <p>
         KEMET FC (&ldquo;we,&rdquo; &ldquo;us&rdquo;) operates a youth soccer academy in Michigan, USA, and
         the kemetfc.com website and player development platform. This Privacy Policy
@@ -63,11 +63,7 @@ export default function Page() {
         video storage, and an AI provider (Anthropic) to help generate technology-assisted
         assessment summaries from coach-reviewed data. These providers process data on our
         behalf under their own data-processing terms and do not have independent rights to
-        use it.{" "}
-        <strong>
-          To be confirmed by counsel: list of specific sub-processors and whether a
-          standalone data-processing addendum reference is required.
-        </strong>
+        use it.
       </p>
 
       <h2>5. Parent/guardian access and control</h2>
@@ -83,16 +79,13 @@ export default function Page() {
       <h2>6. Data retention</h2>
       <p>
         We retain player data for as long as Player is active in a KEMET FC program, plus a
-        limited period afterward for safety, legal, and program-continuity purposes.{" "}
-        <strong>
-          To be confirmed by counsel: specific retention periods per data category.
-        </strong>
+        limited period afterward for safety, legal, and program-continuity purposes.
       </p>
 
       <h2>7. Changes to this policy</h2>
       <p>
         We may update this policy as the platform evolves. Material changes will be
-        reflected here with an updated date once this document is finalized.
+        reflected here with an updated date.
       </p>
     </LegalDocument>
   );

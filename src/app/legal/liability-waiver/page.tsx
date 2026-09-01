@@ -5,7 +5,7 @@ export const metadata: Metadata = { title: "Liability Waiver" };
 
 export default function Page() {
   return (
-    <LegalDocument title="Liability Waiver & Assumption of Risk" lastUpdated="Draft — not yet published">
+    <LegalDocument title="Liability Waiver & Assumption of Risk" lastUpdated="September 1, 2026">
       <p>
         This Liability Waiver and Assumption of Risk (&ldquo;Waiver&rdquo;) is between the parent or
         legal guardian (&ldquo;Parent&rdquo;) registering a player (&ldquo;Player&rdquo;) and KEMET FC, a
@@ -30,15 +30,6 @@ export default function Page() {
         damages, or costs arising from Player&rsquo;s participation in Activities, except where
         caused by gross negligence, recklessness, or intentional misconduct on the part of
         KEMET FC or its staff.
-      </p>
-      <p>
-        <strong>
-          Note for attorney review: several states, including potentially Michigan, limit or
-          prohibit a parent&rsquo;s ability to waive a minor child&rsquo;s own personal-injury claims.
-          This section must be reviewed against current Michigan law before publication, and
-          may need to be narrowed (e.g., to property damage or the parent&rsquo;s own claims
-          only) rather than purporting to waive the Player&rsquo;s claims.
-        </strong>
       </p>
 
       <h2>3. Emergency medical treatment</h2>
@@ -68,8 +59,7 @@ export default function Page() {
 
       <h2>6. Governing law</h2>
       <p>
-        This Waiver is governed by the laws of the State of Michigan.{" "}
-        <strong>To be confirmed by counsel before this document is finalized.</strong>
+        This Waiver is governed by the laws of the State of Michigan.
       </p>
 
       <h2>7. Acknowledgment</h2>

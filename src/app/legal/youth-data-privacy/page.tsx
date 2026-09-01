@@ -5,7 +5,7 @@ export const metadata: Metadata = { title: "Youth Data Privacy" };
 
 export default function Page() {
   return (
-    <LegalDocument title="Youth Data Privacy" lastUpdated="Draft — not yet published">
+    <LegalDocument title="Youth Data Privacy" lastUpdated="September 1, 2026">
       <p>
         Nearly all KEMET FC players are minors. This page explains, specifically, how we
         handle children&rsquo;s information, in addition to our general{" "}
@@ -52,8 +52,7 @@ export default function Page() {
       </ul>
       <p>
         Requests can be made through our <a href="/contact">Contact</a> page. We aim to
-        respond promptly; a specific response timeframe will be published once this document
-        is finalized.
+        respond promptly.
       </p>
 
       <h2>5. Data we do not knowingly collect</h2>

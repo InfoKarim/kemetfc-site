@@ -5,7 +5,7 @@ export const metadata: Metadata = { title: "Photo/Video Policy" };
 
 export default function Page() {
   return (
-    <LegalDocument title="Photo/Video Policy" lastUpdated="Draft — not yet published">
+    <LegalDocument title="Photo/Video Policy" lastUpdated="September 1, 2026">
       <p>
         KEMET FC may photograph or record video of players during training sessions and
         assessments. This policy explains how that footage is used, and what a parent&rsquo;s

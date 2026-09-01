@@ -5,12 +5,12 @@ export const metadata: Metadata = { title: "Refund Policy" };
 
 export default function Page() {
   return (
-    <LegalDocument title="Refund Policy" lastUpdated="Draft — not yet published">
+    <LegalDocument title="Refund Policy" lastUpdated="September 1, 2026">
       <div className="rounded-md border border-navy/15 bg-navy/5 p-4 text-sm text-navy">
         Pricing for the 8-Week Player Development Program has not been finalized yet
         (&ldquo;Pricing Coming Soon&rdquo; on our Programs page). The specific windows and amounts
         below are a starting structure only and need to be set by KEMET FC once pricing is
-        decided, then reviewed by counsel.
+        decided.
       </div>
 
       <h2>1. Free Assessment Day</h2>

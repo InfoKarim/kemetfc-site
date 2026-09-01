@@ -5,7 +5,7 @@ export const metadata: Metadata = { title: "Terms & Conditions" };
 
 export default function Page() {
   return (
-    <LegalDocument title="Terms & Conditions" lastUpdated="Draft — not yet published">
+    <LegalDocument title="Terms & Conditions" lastUpdated="September 1, 2026">
       <p>
         These Terms & Conditions (&ldquo;Terms&rdquo;) govern registration for and participation in
         KEMET FC programs, and use of the kemetfc.com website. By registering a player or
@@ -70,14 +70,12 @@ export default function Page() {
       <p>
         Except for injury-related matters covered by the{" "}
         <a href="/legal/liability-waiver">Liability Waiver</a>, KEMET FC&rsquo;s liability under
-        these Terms is limited to the amount paid for the relevant program.{" "}
-        <strong>To be confirmed by counsel.</strong>
+        these Terms is limited to the amount paid for the relevant program.
       </p>
 
       <h2>9. Governing law</h2>
       <p>
-        These Terms are governed by the laws of the State of Michigan.{" "}
-        <strong>To be confirmed by counsel before this document is finalized.</strong>
+        These Terms are governed by the laws of the State of Michigan.
       </p>
 
       <h2>10. Changes to these Terms</h2>
