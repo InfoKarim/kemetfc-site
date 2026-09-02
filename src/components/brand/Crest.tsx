@@ -18,7 +18,7 @@ export function Crest({
         src="/brand/kemet-fc-crest.png"
         alt={title}
         fill
-        sizes="112px"
+        sizes="176px"
         className="object-contain"
         priority={priority}
       />

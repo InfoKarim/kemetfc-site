@@ -35,7 +35,7 @@ export function Hero() {
 
       <Container className="relative flex min-h-[92vh] flex-col items-center justify-center py-28 text-center sm:py-32">
         <div className="animate-fade-up flex flex-col items-center">
-          <Crest className="h-24 w-24 sm:h-28 sm:w-28" priority />
+          <Crest className="h-32 w-32 sm:h-40 sm:w-40 lg:h-44 lg:w-44" priority />
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-light/90">
             <span className="rounded-full border border-white/15 px-3 py-1.5">
