@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import Link from "next/link";
+import { trackMetaPixelEvent } from "@/lib/metaPixel";
 
 const inputClass =
   "mt-1.5 w-full rounded-sm border border-navy/15 bg-white px-4 py-3 text-sm text-navy placeholder:text-stone/60 outline-none transition-colors focus:border-gold focus:ring-2 focus:ring-gold/30";
@@ -96,6 +97,7 @@ export function RegistrationForm() {
         );
       }
 
+      trackMetaPixelEvent("Lead");
       setSubmitted(true);
     } catch {
       setError(

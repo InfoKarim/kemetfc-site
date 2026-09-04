@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { trackMetaPixelEvent } from "@/lib/metaPixel";
 
 const inputClass =
   "mt-1.5 w-full rounded-sm border border-navy/15 bg-white px-4 py-3 text-sm text-navy placeholder:text-stone/60 outline-none transition-colors focus:border-gold focus:ring-2 focus:ring-gold/30";
@@ -40,6 +41,7 @@ export function ContactForm() {
         throw new Error("We couldn't send your message. Please try again.");
       }
 
+      trackMetaPixelEvent("Contact");
       setSubmitted(true);
     } catch {
       setError(
