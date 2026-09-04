@@ -7,12 +7,47 @@ const inputClass =
 
 const labelClass = "text-xs font-semibold uppercase tracking-[0.1em] text-navy";
 
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000";
+
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+
+    const data = new FormData(e.currentTarget);
+    const payload = {
+      name: String(data.get("name") || ""),
+      email: String(data.get("email") || ""),
+      topic: String(data.get("topic") || ""),
+      message: String(data.get("message") || ""),
+    };
+
+    setError(null);
+    setSubmitting(true);
+
+    try {
+      const response = await fetch(`${API_BASE_URL}/public/contact-messages`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("We couldn't send your message. Please try again.");
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError(
+        "We couldn't send your message. Please check your connection and try again."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (submitted) {
@@ -58,11 +93,15 @@ export function ContactForm() {
           <textarea required name="message" rows={5} className={inputClass} />
         </label>
       </div>
+      {error ? (
+        <p className="mt-5 text-sm font-medium text-red">{error}</p>
+      ) : null}
       <button
         type="submit"
-        className="mt-6 w-full rounded-sm bg-gradient-to-b from-gold-light to-gold px-6 py-4 text-sm font-bold uppercase tracking-[0.14em] text-navy shadow-[0_8px_24px_-8px_rgba(212,175,55,0.6)] transition-transform hover:-translate-y-0.5 sm:w-auto"
+        disabled={submitting}
+        className="mt-6 w-full rounded-sm bg-gradient-to-b from-gold-light to-gold px-6 py-4 text-sm font-bold uppercase tracking-[0.14em] text-navy shadow-[0_8px_24px_-8px_rgba(212,175,55,0.6)] transition-transform hover:-translate-y-0.5 disabled:opacity-60 disabled:hover:translate-y-0 sm:w-auto"
       >
-        Send Message
+        {submitting ? "Sending…" : "Send Message"}
       </button>
     </form>
   );
